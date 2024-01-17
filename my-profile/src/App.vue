@@ -22,17 +22,20 @@ export default {
 					name: 'welcome',
 				},
 				1: {
-					title: 'About Me',
 					name: 'about-me',
 					grid: 'small',
 				},
 				2: {
-					title: 'Past Experience',
+					title: 'Professional Experience',
+					subtitle: '15+ years experience',
+					icon: 'fa fa-user',
 					name: 'past-experience',
 					grid: 'large',
 				}, 
 				3: {
 					title: 'Florida Property Map',
+					subtitle: 'Explore property and census data in Florida',
+					icon: 'fa fa-map-marker',
 					name: 'property-map',
 					grid: 'large',
 				},

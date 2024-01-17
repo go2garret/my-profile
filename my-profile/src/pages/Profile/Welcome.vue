@@ -7,7 +7,9 @@
             v-for="(page, i) in pagesFiltered">
                 <Card
                 :title="page.title"
+                :subtitle="page.subtitle"
                 :name="page.name"
+                :icon="page.icon"
                 v-on:setActive="setActive(page.name)">
 
                     <AboutMe v-if="page.name=='about-me'"></AboutMe>

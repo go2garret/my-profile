@@ -11,11 +11,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+
 import { faGit } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLaravel } from '@fortawesome/free-brands-svg-icons'
@@ -27,7 +32,7 @@ import { faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library
-    .add(faCode, faCodeBranch, faCss3Alt, faDatabase, faEarthAmericas, faGit, faGithub, faLaravel, faLinkedin, faNpm, faVuejs, faPhp, faTerminal)
+    .add(faAddressBook, faBriefcase, faCode, faCodeBranch, faCss3Alt, faDatabase, faEarthAmericas, faGit, faGithub, faLaravel, faLinkedin, faMapMarker, faNpm, faPhp, faTerminal, faUser, faVuejs)
 
 
 createApp(App)
