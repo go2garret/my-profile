@@ -1,6 +1,7 @@
 <template>
     <div>
-        <Profile></Profile>
+        <Profile :page="active">
+        </Profile>          
     </div>
 </template>
 
@@ -9,8 +10,16 @@
 
     export default {
         name: 'Home',
+        props: {
+            active: {
+                type: String
+            }
+        },
+        mounted() {
+            console.log("Home", this.active);
+        },
         components: {
-            Profile
+            Profile,
         }    
     }
 </script>

@@ -10,13 +10,6 @@ const routes = [
             title: `Garret Krawchison's Homepage`
         }
 	},
-    {
-		path: '/',
-		name: 'About Me',
-        meta: {
-            title: `Garret Krawchison's Homepage`
-        }
-	},
 ];
 
 const router = createRouter({
