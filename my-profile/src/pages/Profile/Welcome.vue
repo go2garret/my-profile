@@ -14,7 +14,7 @@
             </div>   
 
             <div class="grid-item large">
-                <Card>   
+                <Card title="Professional Experience">   
                     <PastExperience></PastExperience>             
                 </Card>                
             </div>
