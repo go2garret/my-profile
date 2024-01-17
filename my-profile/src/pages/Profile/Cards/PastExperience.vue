@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-500">
+        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-500 border">
             <div class="mb-1">Where I have Worked</div>
             <IconTray :items="items">
 
@@ -8,11 +8,41 @@
         </div>
 
         
-        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-500">
+        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-800 border">
             <div class="mb-1">Skills</div>
-            
-            <div>
-                things
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="skill">
+                    <div>Git</div>
+                    <font-awesome-icon icon="fa-solid fa-code-branch" class="icon" size="2xl" title="Git" />
+                </div>        
+                <div class="skill">
+                    <div>SQL</div>
+                    <font-awesome-icon icon="fa-solid fa-database" class="icon" size="2xl" title="SQL" />                    
+                </div>
+                <div class="skill">
+                    <div>Vue.js</div>
+                    <font-awesome-icon icon="fa-brands fa-vuejs" class="icon" size="2xl" title="Vue JS" />                    
+                </div>
+                <div class="skill">
+                    <div>Laravel</div>
+                    <font-awesome-icon icon="fa-brands fa-laravel" class="icon" size="2xl" title="Laravel" />                    
+                </div>
+                <div class="skill">
+                    <div>PHP</div>
+                    <font-awesome-icon icon="fa-brands fa-php" class="icon" size="2xl" title="PHP" />                    
+                </div>
+                <div class="skill">
+                    <div>CSS</div>
+                    <font-awesome-icon icon="fa-brands fa-css3-alt" class="icon" size="2xl" title="CSS" />                    
+                </div>
+                <div class="skill">
+                    <div>npm</div>
+                    <font-awesome-icon icon="fa-brands fa-npm" class="icon" size="2xl" title="npm" />                    
+                </div>
+                <div class="skill">
+                    <div>GIS</div>
+                    <font-awesome-icon icon="fa-solid fa-earth-americas" class="icon" size="2xl" title="GIS" />                    
+                </div>
             </div>
         </div>
         
@@ -56,5 +86,21 @@
 </script>
 
 <style lang="scss" scoped>
+.icon {
+    margin-right: 15px;
+}
 
+.skill {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: center;
+    
+    svg {
+        margin: 0;
+        padding: 0;
+    }
+}
 </style>
