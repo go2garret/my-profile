@@ -42,7 +42,7 @@
     
             <div>
     
-                <Welcome>
+                <Welcome :pages="pages">
                 </Welcome>
     
             </div>
@@ -58,6 +58,9 @@
     props: {
         active: {
             type: String
+        },
+        pages: {
+            type: Object
         }
     },
     mounted() {
