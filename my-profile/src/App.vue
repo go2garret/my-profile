@@ -1,16 +1,14 @@
 <template>
-	<div>
-		<Layout v-on:setActive="setActive">
-			<Profile :active="active">
-			</Profile>   
-		</Layout>
-	</div>
+	<Layout v-on:setActive="setActive">
+		<Profile :active="active">
+		</Profile>   
+	</Layout>
 </template>
 
 
 <script>
 import Layout from './pages/Layout.vue';
-import Profile from './pages/Profile.vue';
+import Profile from './pages/Profile/Index.vue';
 
 export default {
 	data() {

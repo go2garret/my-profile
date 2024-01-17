@@ -1,6 +1,6 @@
 <template>
     <div 
-    class="cursor-pointer p-2 m-1">
+    class="cursor-pointer p-1 md:p-2 flex justify-center items-center">
         <span class="material-symbols-outlined" 
         v-if="active">
             radio_button_checked

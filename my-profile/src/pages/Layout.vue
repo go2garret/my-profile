@@ -1,12 +1,13 @@
 <template>
-    <div>
+    <div class="w-full">
 
-        <slot>
+        <slot class="w-full h-full"
+        style="min-height:100vh">
         </slot>
 
-        <div>           
+        <div class="fixed flex justify-center bottom-1 w-full text-center left-0">           
 
-            <div class="flex" >
+            <div class="flex bg-gray-800 text-gray-300 rounded-3xl mb-2 p-3">
 
                 <div v-for="(val, i) in pages" 
                 class="flex items-center justify-center"
