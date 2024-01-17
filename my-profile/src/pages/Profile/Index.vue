@@ -1,16 +1,16 @@
 <template>
     <div class="w-full flex justify-center items-center bg-indigo-900"
     style="min-height:100vh">
-        <div class="window p-2 md:p-3 bg-white w-full rounded-3xl text-gray-900">
+        <div class="w-full">
             <h3>
                 {{ active }}
             </h3>
-
+    
             <div>
-
+    
                 <Welcome v-if="active == 'Welcome'">
                 </Welcome>
-
+    
             </div>
         </div>
     </div>
