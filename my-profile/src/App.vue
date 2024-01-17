@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<Layout v-on:setActive="setActive">
-			<router-view :active="active"></router-view>	
+			<Profile :active="active">
+			</Profile>   
 		</Layout>
 	</div>
 </template>
@@ -9,6 +10,7 @@
 
 <script>
 import Layout from './pages/Layout.vue';
+import Profile from './pages/Profile.vue';
 
 export default {
 	data() {
@@ -18,12 +20,12 @@ export default {
 	},
 
 	components: {
-		Layout
+		Layout,
+		Profile
 	},
 
 	methods: {
 		setActive(page) {
-			console.log("setActive", page)
 			this.active = page;
 		}
 	},

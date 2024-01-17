@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>
-            {{ page }}
+            {{ active }}
         </h3>
     </div>
 </template>
@@ -12,13 +12,13 @@
         name: 'Profile',
 
         props: {
-            page: {
+            active: {
                 type: String
             }
         },
 
         mounted() {
-            console.log("Profile", this.page);
+            console.log("Profile", this.active);
         },
 
         methods: {
