@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full text-gray-800 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow dark:bg-gray-800 dark:border-gray-700">
-        <div class="flex justify-between items-center px-4 py-3 mb-3 bg-gray-200">
+    <div class="w-full h-full text-gray-800 bg-white border border-gray-200 rounded-2xl overflow-hidden shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="flex justify-between items-center px-4 py-3 bg-gray-200">
             <div v-if="title" class="">
                 {{ title }}
             </div>
@@ -15,7 +15,10 @@
 
         </div>
 
-        <slot></slot>
+        <div style="height: 316px" 
+        class="flex flex-col justify-center">
+            <slot></slot>
+        </div>        
 
     </div>
     
@@ -23,6 +26,8 @@
 
 <script>
     export default {
+        name: 'Card',
+        
         props: {
             title: {
                 type: String

@@ -8,33 +8,40 @@
             </div>
 
             <div class="grid-item large">                
-                <Card>   
-                    <AboutMe></AboutMe>             
+                <Card title="Florida Property Map">   
+                    <PropertyMap></PropertyMap>             
                 </Card>                
-            </div>            
+            </div>   
+
             <div class="grid-item large">
                 <Card>   
-                    <AboutMe></AboutMe>             
+                    <PastExperience></PastExperience>             
                 </Card>                
             </div>
+
             <div class="grid-item small">                
                 <Card>   
                     <AboutMe></AboutMe>             
                 </Card>                
             </div>
+
           </div>
     </div>
 </template>
 
 <script>
-    import Card from './Card.vue';
+    import Card from '../../components/Card.vue';
     import AboutMe from './Cards/AboutMe.vue';
+    import PropertyMap from './Cards/PropertyMap.vue';
+    import PastExperience from './Cards/PastExperience.vue';
 
     export default {
 
         components: {
             AboutMe,
-            Card
+            Card,
+            PastExperience,
+            PropertyMap
         }
         
     }
@@ -45,6 +52,7 @@
     .grid-item {
         min-height: 200px;
         width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
