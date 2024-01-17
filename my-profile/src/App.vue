@@ -1,5 +1,6 @@
 <template>
 	<Layout :pages="pages"
+	:active="active"
 	v-on:setActive="setActive">
 		<Profile :active="active" :pages="pages">
 		</Profile>   
@@ -16,6 +17,10 @@ export default {
 		return {
 			active: null,			
 			pages: {
+				0: {
+					title: 'Welcome',
+					name: 'welcome',
+				},
 				1: {
 					title: 'About Me',
 					name: 'about-me',

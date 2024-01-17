@@ -1,17 +1,19 @@
 <template>
     <div class="w-full flex justify-center items-center">
-        
+
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-            
+
             <div class="grid-item" :class="page.grid"
-            v-for="(page, i) in pages">
+            v-for="(page, i) in pagesFiltered">
                 <Card
                 :title="page.title"
                 :name="page.name"
-                v-on:setActive="setActive(page.name)">                   
+                v-on:setActive="setActive(page.name)">
+
                     <AboutMe v-if="page.name=='about-me'"></AboutMe>
-                    <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>                    
+                    <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
                     <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
+
                 </Card>
             </div>
 
@@ -51,6 +53,19 @@
             setActive(item) {
                 console.log('setactive', item);
                 this.active = item;
+            }
+        },
+
+        computed: {
+            pagesFiltered() {
+                let pages = [];
+                Object.keys(this.pages).forEach((key) => {
+                    if (this.pages[key].name == 'welcome') {
+                        return;
+                    }
+                    pages.push(this.pages[key])
+                })
+                return pages;
             }
         }
 

@@ -1,7 +1,7 @@
 <template>
     <div class="w-full">
 
-        <slot class="w-full h-full"
+        <slot class="w-full"
         style="min-height:100vh">
         </slot>
 
@@ -43,11 +43,13 @@
             pages: {
                 type: Object,
                 required: true
+            },
+            active: {
+                type: String
             }
         },
         data() {
             return {
-                active: 'Welcome',
             }            
         },
 
@@ -57,14 +59,14 @@
         },
 
         mounted() {
-            this.handleRoute();
+            // this.handleRoute();
         },
 
         methods: {
             handleRoute() {            
                 const router = this.$router;
                 const path = router.currentRoute.value.path
-                const page = path == '/' ? 'Welcome' : page;
+                const page = path == '/' ? 'welcome' : page;
                 this.setActive(page);
             },
             
