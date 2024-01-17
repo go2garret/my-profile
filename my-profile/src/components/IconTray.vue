@@ -3,7 +3,7 @@
         <div class="w-full" style="margin-left:10px">
             <div class="w-full tray">
                 <div class="relative circle-img-container" v-for="(item, i) in items">
-                    <div class="flex-shrink-0 cursor-pointer border border-4 border-grey-300 rounded-full circle-img"
+                    <div class="flex-shrink-0 cursor-pointer border border-gray-800 rounded-full circle-img"
                     :style="{backgroundImage: 'url(' + item.image + ')'}">
                     </div>
                 </div>                    

@@ -2,9 +2,15 @@
     <div class="w-full flex justify-center items-center">
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
             <div class="grid-item small">                
-                <Card title="About Me">
+                <Card>
                     <AboutMe></AboutMe>                
                 </Card>
+            </div>
+
+            <div class="grid-item large">
+                <Card title="Professional Experience">   
+                    <PastExperience class="overflow-auto"></PastExperience>             
+                </Card>                
             </div>
 
             <div class="grid-item large">                
@@ -12,12 +18,6 @@
                     <PropertyMap></PropertyMap>             
                 </Card>                
             </div>   
-
-            <div class="grid-item large">
-                <Card title="Professional Experience">   
-                    <PastExperience class="overflow-auto"></PastExperience>             
-                </Card>                
-            </div>
 
             <div class="grid-item small">                
                 <Card>   
@@ -69,12 +69,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1rem 1rem;
+        padding: 0.5rem;
     }
 
     @media screen and (min-width: 600px) {
         
         .grid-item {
+            padding: 1rem;
             &.small {
                 width: 40%;
             }

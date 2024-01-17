@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center pb-10">
+    <div class="flex flex-col items-center p-4">
 
         <div class="w-24 h-24 rounded-full shadow-lg font-bold text-6xl text-gray-700 flex items-center justify-center mb-3">
             G
@@ -10,8 +10,15 @@
         </h5>
 
         <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">
-            Full Stack Developer
+            <div>Full Stack Engineer</div>
+            <div>Geospatial Developer</div>
         </div>
+
+        
+        <div class="text-sm text-gray-700 mb-3 bg-gray-300 p-2 rounded-lg border">
+            I specialize in relational databases, web development, and object-oriented programming
+        </div>
+
 
         <div class="flex flex-col justify-center items-center text-gray-500">
             <div class="flex justify-center items-center text-sm">

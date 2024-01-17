@@ -1,23 +1,23 @@
 <template>
-    <div>
-        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-500 border">
-            <div class="mb-1">Where I have Worked</div>
+    <div class="self-stretch h-full pb-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-800 to-gray-900">
+        <div class="py-3 m-3 rounded-3xl text-gray-100">
+            <div class="mb-3">Places I have Worked</div>
             <IconTray :items="items">
 
             </IconTray>
         </div>
 
         
-        <div class="bg-gray-100 py-3 m-3 rounded-3xl text-gray-800 border">
-            <div class="mb-1">Skills</div>
+        <div class="py-3 m-3 rounded-3xl text-gray-100">
+            <div class="mb-1">Some of my Skills</div>
             <div class="flex flex-wrap items-center justify-center">
                 <div class="skill">
                     <div>Git</div>
-                    <font-awesome-icon icon="fa-solid fa-code-branch" class="icon" size="2xl" title="Git" />
+                    <font-awesome-icon icon="fa fa-code-branch" class="icon" size="2xl" title="Git" />
                 </div>        
                 <div class="skill">
                     <div>SQL</div>
-                    <font-awesome-icon icon="fa-solid fa-database" class="icon" size="2xl" title="SQL" />                    
+                    <font-awesome-icon icon="fa fa-database" class="icon" size="2xl" title="SQL" />                    
                 </div>
                 <div class="skill">
                     <div>Vue.js</div>
@@ -32,6 +32,10 @@
                     <font-awesome-icon icon="fa-brands fa-php" class="icon" size="2xl" title="PHP" />                    
                 </div>
                 <div class="skill">
+                    C#
+                    <font-awesome-icon icon="fa fa-code" class="icon" size="2xl" title="GIS" /> 
+                </div>
+                <div class="skill">
                     <div>CSS</div>
                     <font-awesome-icon icon="fa-brands fa-css3-alt" class="icon" size="2xl" title="CSS" />                    
                 </div>
@@ -41,7 +45,13 @@
                 </div>
                 <div class="skill">
                     <div>GIS</div>
-                    <font-awesome-icon icon="fa-solid fa-earth-americas" class="icon" size="2xl" title="GIS" />                    
+                    <font-awesome-icon icon="fa fa-earth-americas" class="icon" size="2xl" title="GIS" />                    
+                </div>
+                <div class="skill">
+                    MySQL
+                </div>
+                <div class="skill">
+                    PostgreSQL
                 </div>
             </div>
         </div>
