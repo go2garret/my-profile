@@ -1,6 +1,6 @@
 <template>
     <div class="w-full flex justify-center items-center">
-        <div class="flex w-full flex-wrap" style="max-width:800px">
+        <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
             <div class="grid-item small">                
                 <Card title="About Me">
                     <AboutMe></AboutMe>                
@@ -15,7 +15,7 @@
 
             <div class="grid-item large">
                 <Card title="Professional Experience">   
-                    <PastExperience></PastExperience>             
+                    <PastExperience class="overflow-auto"></PastExperience>             
                 </Card>                
             </div>
 
@@ -24,6 +24,19 @@
                     <AboutMe></AboutMe>             
                 </Card>                
             </div>
+            
+            <div class="grid-item small">
+                <Card title="Professional Experience">   
+                    <PastExperience class="overflow-auto"></PastExperience>             
+                </Card>                
+            </div>
+
+            <div class="grid-item large">                
+                <Card>   
+                    <AboutMe></AboutMe>             
+                </Card>                
+            </div>
+
 
           </div>
     </div>
