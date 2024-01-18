@@ -22,6 +22,7 @@ export default {
 					name: 'welcome',
 				},
 				1: {
+					title: 'About Me',
 					name: 'about-me',
 					grid: 'small',
 				},

@@ -1,7 +1,8 @@
 <template>
     <div class="w-full"
     style="background:url(https://images.unsplash.com/photo-1633524411211-b682455441f5?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size:cover; height:100vh; overflow: auto">
-        <div class="profile-header flex items-center justify-between px-4">
+        <div class="profile-header sticky flex items-center justify-between px-4"
+        style="top:0;left:0">
 
             <div>
 
