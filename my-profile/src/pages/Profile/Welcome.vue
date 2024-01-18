@@ -6,19 +6,22 @@
             :class="active && active == page.name ? ' active ' : (active && !['welcome'].includes(active) ? ' hidden ' : ' ') +  page.grid + ' ' + active"
             v-for="(page, i) in pagesFiltered">
                 
-                <Card
-                :title="page.title"
-                :subtitle="page.subtitle"
-                :name="page.name"
-                :icon="page.icon"
-                class="grid-card">
+                <transition-group name="cards">
+                    <Card
+                    :title="page.title"
+                    :subtitle="page.subtitle"
+                    :name="page.name"
+                    :icon="page.icon"
+                    class="grid-card">
 
-                    <AboutMe v-if="page.name=='about-me'"></AboutMe>
-                    <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
-                    <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
-                    <Resume v-if="page.name=='resume'"></Resume>
+                        <AboutMe v-if="page.name=='about-me'"></AboutMe>
+                        <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
+                        <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
+                        <Resume v-if="page.name=='resume'"></Resume>
 
-                </Card>
+                    </Card>
+                </transition-group>
+
             </div>
 
 
@@ -81,6 +84,8 @@
 
 <style lang="scss" scoped>
 
+
+
     .grid-item {
         width: 100%;
         display: flex;
@@ -88,13 +93,15 @@
         justify-content: center;
         padding: 0.5rem;
         position: relative; 
+        opacity: 1;
+        transition: width ease 120ms;
         
         &.hidden {
-            display: none;
+            opacity: 0;
         }
 
         .grid-card {
-            transition: transform ease 84ms;
+            transition: transform ease 200ms;
 
             &.hoverActive {
                 transform: scale(1.05);

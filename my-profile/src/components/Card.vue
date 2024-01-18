@@ -1,6 +1,6 @@
 <template>
     <div class="my-card w-full text-gray-800 bg-gradient-to-r from-gray-100 to-gray-300 rounded-2xl overflow-hidden shadow-lg"
-    style="transition: all 10 ease;"
+    style="transition: width 84ms ease, height: 84ms ease;"
     @mouseenter="onMouseenter(name)"
     @mouseleave="onMouseleave(name)"
     :class="{'hoverActive': hoverActive == name ? true : false, 'active': active ? true : false}">
