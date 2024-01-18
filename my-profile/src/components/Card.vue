@@ -1,6 +1,9 @@
 <template>
     <div class="w-full text-gray-800 bg-gradient-to-r from-gray-100 to-gray-300 rounded-2xl overflow-hidden shadow-lg"
-    style="height:400px;">
+    style="height:400px; transition: all 10 ease;"
+    @mouseenter="onMouseenter(name)"
+    @mouseleave="onMouseleave(name)"
+    :class="{'hoverActive': hoverActive == name ? true : false}">
         <div class="flex justify-between items-center text-gray-100 relative">
             <div v-if="title"
             class="flex items-center px-4">
@@ -64,15 +67,29 @@
             }
         },
 
+        data() {
+            return {
+                hoverActive: null
+            }            
+        },
+
         methods: {
             setActive(item) {
                 this.$emit('setActive', item);
-            }
+            },
+            onMouseenter(item) {
+                this.hoverActive = item;
+            },
+            onMouseleave(item) {
+                this.hoverActive = null;
+            },
         }
         
     }
 </script>
 
 <style lang="scss" scoped>
-
+.hoverActive {
+    transform: scale(1.05);
+}
 </style>

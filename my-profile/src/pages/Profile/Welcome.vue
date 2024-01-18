@@ -2,7 +2,7 @@
     <div class="w-full flex justify-center items-center">
 
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-            <div class="grid-item" :class="active && active == page.name ? 'active ' : ' ' +  page.grid"
+            <div class="grid-item" :class="active && active == page.name ? 'active ' : '' +  page.grid"
             v-for="(page, i) in pagesFiltered">
                 
                 <Card
