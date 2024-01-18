@@ -58,6 +58,9 @@
             },
             icon: {
                 type: String
+            },
+            active: {
+                type: Boolean
             }
         },
 

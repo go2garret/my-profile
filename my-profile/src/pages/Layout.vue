@@ -59,6 +59,7 @@
         },
 
         mounted() {
+            console.log("Layout active", this.active)
         },
 
         methods: {
@@ -70,7 +71,7 @@
             },
             
             setActive(page) {
-                console.log('setactive', page);                         
+                console.log('setactiveLayout...', page);                         
                 this.$router.push(`${page}`);
                 this.$emit('setActive', page);
             },
@@ -82,6 +83,12 @@
                 this.$refs.Popover.showPopover(popupDiv, target);
             }
         },
+
+        watch: {
+            active(val) {
+                this.setActive(val)
+            }
+        }
     }
 </script>
 

@@ -43,7 +43,7 @@
 
             <div>
 
-                <Welcome :pages="pages">
+                <Welcome :pages="pages" :active="active">
                 </Welcome>
 
             </div>

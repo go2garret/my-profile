@@ -2,15 +2,14 @@
     <div class="w-full flex justify-center items-center">
 
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-
-            <div class="grid-item" :class="page.grid"
+            <div class="grid-item" :class="active && active == page.name ? 'active ' : ' ' +  page.grid"
             v-for="(page, i) in pagesFiltered">
+                
                 <Card
                 :title="page.title"
                 :subtitle="page.subtitle"
                 :name="page.name"
-                :icon="page.icon"
-                v-on:setActive="setActive(page.name)">
+                :icon="page.icon">
 
                     <AboutMe v-if="page.name=='about-me'"></AboutMe>
                     <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
@@ -37,6 +36,10 @@
             pages: {
                 type: Object,
                 required: true
+            },
+
+            active: {
+                type: Boolean
             }
         },
 
@@ -49,14 +52,11 @@
         },
 
         data() {
-            return {
-                active: null
-            }
         },
 
         methods: {
             setActive(item) {
-                console.log('setactive', item);
+                console.log('setactive welcome', item);
                 this.active = item;
             }
         },

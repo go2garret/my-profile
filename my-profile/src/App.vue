@@ -2,6 +2,7 @@
 	<Layout :pages="pages"
 	:active="active"
 	v-on:setActive="setActive">
+		app active? {{ active }}
 		<Profile :active="active" :pages="pages">
 		</Profile>   
 	</Layout>
@@ -58,6 +59,7 @@ export default {
 
 	methods: {
 		setActive(page) {
+			console.log("setAppActive...", page)
 			this.active = page;
 		}
 	},
