@@ -2,22 +2,47 @@
     <div class="w-full flex justify-center items-center">
 
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-            
+
             <transition-group name="grid">
 
-                <div class="grid-item" 
+                <div class="grid-item"
                 :key="page.name+'gi'"
-                v-show="active && active == page.name || (active && ['welcome'].includes(active)) || !active"
+                v-show="isActive(page.name)"
                 :class="active && active == page.name ? ' active ' : ' ' +  page.grid + ' ' + active"
                 v-for="(page, i) in pagesFiltered">
-                    
+
                     <Card
                     v-on:setActive="setActive"
                     :title="page.title"
                     :subtitle="page.subtitle"
                     :name="page.name"
                     :icon="page.icon"
+                    :active="active"
                     class="grid-card">
+
+                        <template v-slot:top-right>
+
+                            <div
+                            class="absolute cursor-pointer bg-indigo-300 p-1 top-1 right-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 focus:outline-none rounded-lg text-sm p-1.5 hover:border-none"
+                            @click="setActive(page.name)">
+
+                                <div class="flex items-center text-gray-900 text-lg"
+                                v-if="!active || active == 'welcome'">
+                                    <div class="text-sm mr-1">open</div>
+                                    <font-awesome-icon icon="fa fa-arrow-up-right-from-square">
+                                    </font-awesome-icon>
+                                </div>
+
+                                <div class="flex items-center text-gray-900 text-lg"
+                                v-else>
+                                    <div class="text-sm mr-1">close</div>
+                                    <font-awesome-icon icon="fa fa-times fa-lg">
+                                    </font-awesome-icon>
+                                </div>
+
+                            </div>
+
+                        </template>
 
                         <AboutMe v-if="page.name=='about-me'"></AboutMe>
                         <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
@@ -26,7 +51,7 @@
 
                     </Card>
                 </div>
-            
+
             </transition-group>
 
 
@@ -66,7 +91,14 @@
 
         methods: {
             setActive(item) {
+                if (this.active == item) {
+                    this.$emit('setActive', 'welcome');
+                    return;
+                }
                 this.$emit('setActive', item);
+            },
+            isActive(name) {
+                return this.active && this.active == name || (this.active && ['welcome'].includes(this.active)) || !this.active;
             }
         },
 
@@ -81,6 +113,7 @@
                 })
                 return pages;
             }
+
         }
 
     }
@@ -104,9 +137,9 @@
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
-        position: relative; 
+        position: relative;
         //transition: left ease 0.2s;
-        
+
         &.hidden {
             //display: none;
         }
@@ -124,7 +157,7 @@
             top: 20px;
             //padding: 0 1rem;
             left: 0;
-            height: 100%;            
+            height: 100%;
 
             .grid-card {
                 height: calc(100% - 80px);
@@ -134,7 +167,7 @@
                 }
             }
         }
-        
+
     }
 
     @media screen and (min-width: 600px) {
