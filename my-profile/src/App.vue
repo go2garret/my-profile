@@ -2,7 +2,8 @@
 	<Layout :pages="pages"
 	:active="active"
 	v-on:setActive="setActive">
-		<Profile :active="active" :pages="pages">
+		<Profile :active="active" :pages="pages"
+		v-on:setActive="setActive">
 		</Profile>   
 	</Layout>
 </template>

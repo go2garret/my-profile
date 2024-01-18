@@ -43,7 +43,8 @@
 
             <div>
 
-                <Welcome :pages="pages" :active="active">
+                <Welcome :pages="pages" :active="active"
+                v-on:setActive="setActive">
                 </Welcome>
 
             </div>
@@ -66,7 +67,13 @@
     },
     mounted() {
     },
-    methods: {},
+    methods: {
+        
+        setActive(item) {
+            this.$emit('setActive', item);
+        }
+        
+    },
     components: { Welcome }
 }
 </script>

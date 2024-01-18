@@ -12,6 +12,7 @@
                 v-for="(page, i) in pagesFiltered">
                     
                     <Card
+                    v-on:setActive="setActive"
                     :title="page.title"
                     :subtitle="page.subtitle"
                     :name="page.name"
@@ -65,8 +66,7 @@
 
         methods: {
             setActive(item) {
-                console.log('setactive welcome', item);
-                this.active = item;
+                this.$emit('setActive', item);
             }
         },
 
