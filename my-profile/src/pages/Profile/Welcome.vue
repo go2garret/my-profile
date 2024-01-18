@@ -48,6 +48,7 @@
                         <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
                         <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
                         <Resume v-if="page.name=='resume'"></Resume>
+                        <Calendar v-if="page.name=='calendar'"></Calendar>
 
                     </Card>
                 </div>
@@ -65,6 +66,8 @@
     import PropertyMap from './Cards/PropertyMap.vue';
     import PastExperience from './Cards/PastExperience.vue';
     import Resume from './Cards/Resume.vue';
+    import Calendar from './Cards/Calendar.vue';
+
 
     export default {
         props: {
@@ -80,13 +83,11 @@
 
         components: {
             AboutMe,
+            Calendar,
             Card,
             PastExperience,
             PropertyMap,
             Resume
-        },
-
-        data() {
         },
 
         methods: {
@@ -112,7 +113,7 @@
                     pages.push(this.pages[key])
                 })
                 return pages;
-            }
+            },
 
         }
 

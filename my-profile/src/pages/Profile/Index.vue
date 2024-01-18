@@ -10,8 +10,7 @@
                 class="text-indigo-100 mr-2 hover:text-indigo-300 my-0 py-0 flex items-center justify-center">
                     <h3 class="font-semibold">
                         <font-awesome-icon icon="fa fa-terminal cursor-pointer"
-                        style="margin-right:6px;"
-                        size="xl" />
+                        style="margin-right:6px;" />
                         Garret Krawchison
                     </h3>
                 </a>
@@ -28,8 +27,7 @@
 
                 <a href="https://www.linkedin.com/in/garret-krawchison-3b753931" target="_blank"
                 class="text-indigo-100 mr-2 hover:text-indigo-300">
-                    <font-awesome-icon icon="fa-brands fa-linkedin cursor-pointer"
-                    size="xl" />
+                    <font-awesome-icon icon="fa-brands fa-linkedin cursor-pointer" />
                     LinkedIn
                 </a>
 

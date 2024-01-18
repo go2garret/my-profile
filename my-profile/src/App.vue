@@ -48,6 +48,13 @@ export default {
 					name: 'resume',
 					grid: 'small',
 				},
+				5: {
+					title: 'Calendar with Live API Data',
+					subtitle: 'Using Full Calendar',
+					icon: 'fa fa-file-pdf',
+					name: 'calendar',
+					grid: 'small',
+				},
 			},
 		}
 	},

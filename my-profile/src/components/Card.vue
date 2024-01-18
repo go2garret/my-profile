@@ -8,8 +8,7 @@
             <div v-if="title"
             class="flex items-center px-4">
                 <div v-if="icon" class="mr-3 text-blue-800 w-8 h-8 border-4 rounded-full border-blue-800 flex items-center justify-center">
-                    <font-awesome-icon :icon="icon"
-                    size="md" />
+                    <font-awesome-icon :icon="icon" />
                 </div>
                 <div class="text-lg text-gray-900 font-semibold py-3 text-left">
                     <div>
