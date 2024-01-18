@@ -2,11 +2,15 @@
     <div class="w-full flex justify-center items-center">
 
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-            <div class="grid-item" 
-            :class="active && active == page.name ? ' active ' : (active && !['welcome'].includes(active) ? ' hidden ' : ' ') +  page.grid + ' ' + active"
-            v-for="(page, i) in pagesFiltered">
-                
-                <transition-group name="cards">
+            
+            <transition-group name="grid">
+
+                <div class="grid-item" 
+                :key="page.name+'gi'"
+                v-show="active && active == page.name || (active && ['welcome'].includes(active)) || !active"
+                :class="active && active == page.name ? ' active ' : ' ' +  page.grid + ' ' + active"
+                v-for="(page, i) in pagesFiltered">
+                    
                     <Card
                     :title="page.title"
                     :subtitle="page.subtitle"
@@ -20,9 +24,9 @@
                         <Resume v-if="page.name=='resume'"></Resume>
 
                     </Card>
-                </transition-group>
-
-            </div>
+                </div>
+            
+            </transition-group>
 
 
           </div>
@@ -84,24 +88,31 @@
 
 <style lang="scss" scoped>
 
-
+    .grid-enter-active,
+    .grid-leave-active {
+        transition: all 0.3s ease;
+    }
+    .grid-enter-from,
+    .grid-leave-to {
+        opacity: 0;
+        transform: translateX(30px);
+    }
 
     .grid-item {
         width: 100%;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
         position: relative; 
-        opacity: 1;
-        transition: width ease 120ms;
+        //transition: left ease 0.2s;
         
         &.hidden {
-            opacity: 0;
+            //display: none;
         }
 
         .grid-card {
-            transition: transform ease 200ms;
+            transition: transform ease 84ms;
 
             &.hoverActive {
                 transform: scale(1.05);
@@ -111,7 +122,7 @@
         &.active {
             position: absolute !important;
             top: 20px;
-            padding: 0 1rem;
+            //padding: 0 1rem;
             left: 0;
             height: 100%;            
 
@@ -123,6 +134,7 @@
                 }
             }
         }
+        
     }
 
     @media screen and (min-width: 600px) {
