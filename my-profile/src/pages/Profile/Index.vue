@@ -77,6 +77,7 @@
         background: rgba(8, 38, 83, 0.7);
         height: 38px;
         width: 100%;
+        z-index: 5;
     }
 
     .window {
