@@ -2,14 +2,16 @@
     <div class="w-full flex justify-center items-center">
 
         <div class="flex w-full flex-wrap pb-24" style="max-width:1100px">
-            <div class="grid-item" :class="active && active == page.name ? 'active ' : '' +  page.grid"
+            <div class="grid-item" 
+            :class="active && active == page.name ? ' active ' : (active && !['welcome'].includes(active) ? ' hidden ' : ' ') +  page.grid + ' ' + active"
             v-for="(page, i) in pagesFiltered">
                 
                 <Card
                 :title="page.title"
                 :subtitle="page.subtitle"
                 :name="page.name"
-                :icon="page.icon">
+                :icon="page.icon"
+                class="grid-card">
 
                     <AboutMe v-if="page.name=='about-me'"></AboutMe>
                     <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
@@ -80,16 +82,39 @@
 <style lang="scss" scoped>
 
     .grid-item {
-        min-height: 200px;
         width: 100%;
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0.5rem;
+        position: relative; 
+        
+        &.hidden {
+            display: none;
+        }
+
+        .grid-card {
+            transition: transform ease 84ms;
+
+            &.hoverActive {
+                transform: scale(1.05);
+            }
+        }
 
         &.active {
-            width: 100%;
+            position: absolute !important;
+            top: 20px;
+            padding: 0 1rem;
+            left: 0;
+            height: 100%;            
+
+            .grid-card {
+                height: calc(100% - 80px);
+
+                &.hoverActive {
+                    transform: none;
+                }
+            }
         }
     }
 
