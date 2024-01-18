@@ -58,10 +58,6 @@
             Popover
         },
 
-        mounted() {
-            console.log("Layout active", this.active)
-        },
-
         methods: {
             handleRoute() {            
                 const router = this.$router;
@@ -83,12 +79,6 @@
                 this.$refs.Popover.showPopover(popupDiv, target);
             }
         },
-
-        watch: {
-            active(val) {
-                this.setActive(val)
-            }
-        }
     }
 </script>
 
