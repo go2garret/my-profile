@@ -17,6 +17,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -32,7 +33,7 @@ import { faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library
-    .add(faAddressBook, faBriefcase, faCode, faCodeBranch, faCss3Alt, faDatabase, faEarthAmericas, faGit, faGithub, faLaravel, faLinkedin, faMapMarker, faNpm, faPhp, faTerminal, faUser, faVuejs)
+    .add(faAddressBook, faBriefcase, faCode, faCodeBranch, faCss3Alt, faDatabase, faEarthAmericas, faFilePdf, faGit, faGithub, faLaravel, faLinkedin, faMapMarker, faNpm, faPhp, faTerminal, faUser, faVuejs)
 
 
 createApp(App)

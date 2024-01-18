@@ -16,7 +16,7 @@
 
         
         <div class="text-sm text-gray-700 mb-3 bg-gray-300 p-2 rounded-lg border">
-            I specialize in relational databases, web development, and object-oriented programming
+            I specialize in Web Development / Relational Databases / Object-Oriented Programming / Geographic Systems
         </div>
 
 

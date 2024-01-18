@@ -15,6 +15,7 @@
                     <AboutMe v-if="page.name=='about-me'"></AboutMe>
                     <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
                     <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
+                    <Resume v-if="page.name=='resume'"></Resume>
 
                 </Card>
             </div>
@@ -29,6 +30,7 @@
     import AboutMe from './Cards/AboutMe.vue';
     import PropertyMap from './Cards/PropertyMap.vue';
     import PastExperience from './Cards/PastExperience.vue';
+    import Resume from './Cards/Resume.vue';
 
     export default {
         props: {
@@ -42,7 +44,8 @@
             AboutMe,
             Card,
             PastExperience,
-            PropertyMap
+            PropertyMap,
+            Resume
         },
 
         data() {

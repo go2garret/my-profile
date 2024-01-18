@@ -4,47 +4,47 @@
         <div class="profile-header flex items-center justify-between px-4">
 
             <div>
-                
+
                 <a href="#"
                 class="text-indigo-100 mr-2 hover:text-indigo-300 my-0 py-0 flex items-center justify-center">
                     <h3 class="font-semibold">
-                        <font-awesome-icon icon="fa fa-terminal cursor-pointer" 
+                        <font-awesome-icon icon="fa fa-terminal cursor-pointer"
                         style="margin-right:6px;"
-                        size="xl" /> 
+                        size="xl" />
                         Garret Krawchison
                     </h3>
-                </a>                    
+                </a>
             </div>
 
             <div>
-                
-                <a href="https://github.com/go2garret" target="_blank" 
+
+                <a href="https://github.com/go2garret" target="_blank"
                 class="text-indigo-100 mr-2 hover:text-indigo-300">
-                    <font-awesome-icon icon="fa-brands fa-github cursor-pointer" 
+                    <font-awesome-icon icon="fa-brands fa-github cursor-pointer"
                     size="xl" />
-                    Github                                    
+                    Github
                 </a>
 
                 <a href="https://www.linkedin.com/in/garret-krawchison-3b753931" target="_blank"
                 class="text-indigo-100 mr-2 hover:text-indigo-300">
-                    <font-awesome-icon icon="fa-brands fa-linkedin cursor-pointer" 
-                    size="xl" />           
-                    LinkedIn         
+                    <font-awesome-icon icon="fa-brands fa-linkedin cursor-pointer"
+                    size="xl" />
+                    LinkedIn
                 </a>
-                
+
             </div>
-            
+
         </div>
         <div class="w-full mt-5">
             <!-- <h3 class="text-2xl py-5" style="text-shadow: 2px 3px 2px rgb(0 0 0 / 40%), 0px -4px 10px rgb(0 0 0 / 30%);">
                 {{ active }}
             </h3> -->
-    
+
             <div>
-    
+
                 <Welcome :pages="pages">
                 </Welcome>
-    
+
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
         .window {
             width: 600px;
             height: unset;
-        }        
+        }
     }
 
 </style>
