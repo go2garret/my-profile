@@ -25,7 +25,7 @@
         <slot name="top-right"></slot>
 
         <div
-        class="h-full flex-grow">
+        class="h-full">
             <slot></slot>
         </div>
 

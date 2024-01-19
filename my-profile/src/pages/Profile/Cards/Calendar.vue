@@ -1,7 +1,7 @@
 <template>
-    <div class="p-2 w-full h-full flex flex-col pb-24 text-gray-800 bg-white">
+    <div class="p-2 w-full text-gray-800 bg-white h-full flex flex-col">
 
-        <div class="mb-1 flex mx-1">
+        <div class="mb-1 mx-1 ">
             
             <div v-if="loading"
             class="text-sm bg-green-300 text-green-800 px-2 rounded-lg inline-block">
@@ -17,12 +17,17 @@
 
         </div>
 
-        <FullCalendar class="flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl" style="height: 900px;"
+        <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl"        
         ref="fullCalendar"
-        :height="'parent'"
-        :contentHeight="'auto'"
+        :height="500"
+        :contentHeight="500"
         :options="calendarOptions">
         </FullCalendar>
+
+
+        <div class="text-gray-400 pb-24">
+            Data provided by <a href='https://api.tvmaze.com' target="_blank">api.tvmaze.com</a>
+        </div>
 
     </div>
 </template>

@@ -86,18 +86,21 @@ button:focus-visible {
 
 /* FullCalendar */
 .fc-view .fc-col-header, .fc-daygrid-body, .fc-scrollgrid-sync-table {
-  height: 100%;
   width: 100% !important
 }
 
 .fc-view thead .fc-scroller {
-  height: 100%;
   overflow: hidden !important;
 }
 
 .fc thead th { /* needs to be same precedence */
   border: none;
-  border-bottom: 1px solid #ebebeb;
+  background-color: rgb(75, 73, 167);
+  border-radius: 1rem;
+}
+
+.fc thead th a {
+  color: rgb(243, 243, 243);
 }
 
 .fc .fc-view table {
@@ -106,6 +109,15 @@ button:focus-visible {
 
 .fc .fc-view tbody presentation {
   border: none;
+}
+
+.fc .fc-view tbody .fc-scroller-liquid-absolute {
+  overflow: hidden !important;
+}
+
+.fc .fc-view-harness-active {
+  min-height: 600px !important;
+  overflow: hidden !important;
 }
 
 .fc .fc-col-header-cell-cushion { /* needs to be same precedence */

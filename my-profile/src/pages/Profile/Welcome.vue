@@ -149,7 +149,7 @@
             transition: transform ease 84ms;
 
             &.hoverActive {
-                transform: scale(1.05);
+                transform: scale(1.025);
             }
         }
 
