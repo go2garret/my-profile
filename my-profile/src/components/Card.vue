@@ -25,7 +25,7 @@
         <slot name="top-right"></slot>
 
         <div
-        class="h-full">
+        class="h-full flex-grow">
             <slot></slot>
         </div>
 
@@ -77,5 +77,7 @@
 .my-card {
     padding: 0;
     height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 </style>
