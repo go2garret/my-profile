@@ -69,6 +69,52 @@ button:focus-visible {
   width: 100%; 
 }
 
+/* Custom */
+
+.no-select {
+  user-select: none;
+  pointer-events: none;
+}
+
+.user-select {
+  user-select: auto;
+  pointer-events: auto;
+}
+
+/* End Custom */
+
+
+/* FullCalendar */
+.fc-view .fc-col-header, .fc-daygrid-body, .fc-scrollgrid-sync-table {
+  height: 100%;
+  width: 100% !important
+}
+
+.fc-view thead .fc-scroller {
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.fc thead th { /* needs to be same precedence */
+  border: none;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.fc .fc-view table {
+  border: none;
+}
+
+.fc .fc-view tbody presentation {
+  border: none;
+}
+
+.fc .fc-col-header-cell-cushion { /* needs to be same precedence */
+  padding-top: 5px; /* an override! */
+  padding-bottom: 5px; /* an override! */
+}
+
+/* End FullCalendar */
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
