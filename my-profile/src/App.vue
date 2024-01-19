@@ -35,25 +35,37 @@ export default {
 					grid: 'large',
 				}, 
 				3: {
+					icon: 'fa fa-user',
+					name: 'banner1',
+					grid: 'banner',
+				}, 
+				4: {
 					title: 'Florida Property Map',
 					subtitle: 'I created this as a unique way to explore property information in Florida',
 					icon: 'fa fa-map-marker',
 					name: 'property-map',
 					grid: 'large',
 				},
-				4: {
+				5: {
 					title: 'My Resume',
 					subtitle: 'Download or print this PDF',
 					icon: 'fa fa-file-pdf',
 					name: 'resume',
 					grid: 'small',
 				},
-				5: {
+				6: {
 					title: 'Calendar with Live API Data',
 					subtitle: 'Using Full Calendar',
 					icon: 'fa fa-file-pdf',
 					name: 'calendar',
 					grid: 'small',
+				},
+				7: {
+					title: 'DataTables Example',
+					subtitle: 'DataTables using API data in Vue',
+					icon: 'fa fa-code',
+					name: 'codepen',
+					grid: 'large',
 				},
 			},
 		}

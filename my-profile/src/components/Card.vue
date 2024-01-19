@@ -1,5 +1,5 @@
 <template>
-    <div class="my-card w-full text-gray-800 bg-gradient-to-r rounded-2xl overflow-hidden shadow-lg relative card-gradient"
+    <div class="w-full"
     style="transition: width 84ms ease, height: 84ms ease;"
     @mouseenter="onMouseenter(name)"
     @mouseleave="onMouseleave(name)"
@@ -7,7 +7,7 @@
         <div class="flex justify-between items-center text-gray-100 relative">
             <div v-if="title"
             class="flex items-center px-4">
-                <div v-if="icon" class="mr-3 text-blue-800 w-8 h-8 border-4 rounded-full border-blue-800 flex items-center justify-center">
+                <div v-if="icon" class="mr-3 text-blue-700 w-8 h-8 border-4 rounded-full border-blue-700 flex items-center justify-center">
                     <font-awesome-icon :icon="icon" />
                 </div>
                 <div class="text-lg text-gray-900 font-semibold py-3 text-left">
@@ -74,15 +74,5 @@
 </script>
 
 <style lang="scss" scoped>
-.my-card {
-    padding: 0;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-}
 
-.card-gradient {
-    background: rgb(255 255 255);
-    background: linear-gradient(70deg, rgb(255 255 255) 0%, rgb(255 255 255) 60%, rgb(237 228 253) 100%);
-}
 </style>

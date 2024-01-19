@@ -2,22 +2,22 @@
     <div class="p-2 w-full text-gray-800 bg-white h-full flex flex-col">
 
         <div class="mb-1 mx-1 ">
-            
+
             <div v-if="loading"
             class="text-sm bg-green-300 text-green-800 px-2 rounded-lg inline-block">
                 Getting data...
             </div>
 
-            <div v-else 
+            <div v-else
             class="text-lg text-left bg-white  text-gray-700 inline-block px-2 border-b border-gray-400 pb-1 w-full">
-            
+
                 <span class="text-gray-500">Showing Airtimes for </span>
                 <b class="">Survivor</b>
             </div>
 
         </div>
 
-        <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl"        
+        <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl"
         ref="fullCalendar"
         :height="'auto'"
         :contentHeight="'auto'"
@@ -62,11 +62,11 @@ export default {
 
     mounted() {
         const currentApiResults = localStorage.getItem('movieApiResults');
-        if (currentApiResults) {            
+        if (currentApiResults) {
             this.displayData(JSON.parse(currentApiResults));
         } else {
             this.getData();
-        }       
+        }
     },
 
     methods: {
@@ -87,10 +87,18 @@ export default {
         },
 
         parseEvent(row) {
+            console.log(row);
+
+            // Calculate show end time
+            let endtime = new Date(row.airdate + 'T' + row.airtime);
+            endtime.setMinutes(endtime.getMinutes() + row.runtime);
+
             const event = {
                 title: row.name,
-                start: row.airdate + 'T00:00:00',
-                end: row.airdate + 'T02:00:00',
+                start: row.airdate + 'T' + row.airtime,
+                end: endtime,
+                season: row.season,
+                episode: row.number
             };
             return event;
         },
@@ -110,4 +118,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

@@ -15,9 +15,9 @@
         </div>
 
         
-        <div class="text-sm text-gray-800 px-2 py-2 mb-3">
+        <!-- <div class="text-sm text-gray-800 px-2 py-2 mb-3">
             I specialize in Web Development / Relational Databases / Object-Oriented Programming / Geographic Systems
-        </div>
+        </div> -->
 
 
         <div class="flex flex-col justify-center items-center text-gray-500">

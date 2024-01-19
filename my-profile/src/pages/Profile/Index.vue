@@ -1,13 +1,13 @@
 <template>
     <div class="w-full"
-    style="background:url(https://images.unsplash.com/photo-1633524411211-b682455441f5?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size:cover; height:100vh; overflow: auto">
+    style="background:url(https://images.unsplash.com/photo-1509088960169-ecb53eda6ed8?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size:cover; height:100vh; overflow: auto">
         <div class="profile-header sticky flex items-center justify-between px-4"
         style="top:0;left:0">
 
             <div>
 
                 <a href="#"
-                class="text-indigo-100 mr-2 hover:text-indigo-300 my-0 py-0 flex items-center justify-center">
+                class="text-blue-100 mr-2 hover:text-blue-300 my-0 py-0 flex items-center justify-center">
                     <h3 class="font-semibold">
                         <font-awesome-icon icon="fa fa-terminal cursor-pointer"
                         style="margin-right:6px;" />
@@ -19,14 +19,14 @@
             <div>
 
                 <a href="https://github.com/go2garret" target="_blank"
-                class="text-indigo-100 mr-2 hover:text-indigo-300">
+                class="text-blue-100 mr-2 hover:text-blue-300">
                     <font-awesome-icon icon="fa-brands fa-github cursor-pointer"
                     size="xl" />
                     Github
                 </a>
 
                 <a href="https://www.linkedin.com/in/garret-krawchison-3b753931" target="_blank"
-                class="text-indigo-100 mr-2 hover:text-indigo-300">
+                class="text-blue-100 mr-2 hover:text-blue-300">
                     <font-awesome-icon icon="fa-brands fa-linkedin cursor-pointer" />
                     LinkedIn
                 </a>

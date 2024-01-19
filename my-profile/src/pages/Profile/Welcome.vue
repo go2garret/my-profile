@@ -8,7 +8,7 @@
                 <div class="grid-item"
                 :key="page.name+'gi'"
                 v-show="isActive(page.name)"
-                :class="active && active == page.name ? ' active ' : ' ' +  page.grid + ' ' + active"
+                :class="active && active == page.name ? ' active ' : ' ' +  page.grid"
                 v-for="(page, i) in pagesFiltered">
 
                     <Card
@@ -18,22 +18,23 @@
                     :name="page.name"
                     :icon="page.icon"
                     :active="active"
-                    class="grid-card">
+                    :class="page.grid == 'banner' ? 'na' : 'grid-card text-gray-800 bg-gradient-to-r rounded-2xl overflow-hidden shadow-lg relative card-gradient'">
 
-                        <template v-slot:top-right>
+                        <template v-slot:top-right 
+                        v-if="page.grid != 'banner'">
 
                             <div
-                            class="absolute cursor-pointer bg-indigo-300 p-1 top-1 right-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 focus:outline-none rounded-lg text-sm p-1.5 hover:border-none"
+                            class="absolute cursor-pointer bg-blue-100 p-1 top-1 right-1 text-blue-600 hover:bg-blue-300 focus:outline-none rounded-lg text-sm p-1.5 hover:border-none"
                             @click="setActive(page.name)">
 
-                                <div class="flex items-center text-gray-900 text-lg"
+                                <div class="flex items-center text-lg"
                                 v-if="!active || active == 'welcome'">
                                     <div class="text-sm mr-1">open</div>
                                     <font-awesome-icon icon="fa fa-arrow-up-right-from-square">
                                     </font-awesome-icon>
                                 </div>
 
-                                <div class="flex items-center text-gray-900 text-lg"
+                                <div class="flex items-center text-lg"
                                 v-else>
                                     <div class="text-sm mr-1">close</div>
                                     <font-awesome-icon icon="fa fa-times fa-lg">
@@ -49,6 +50,26 @@
                         <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
                         <Resume v-if="page.name=='resume'" class="overflow-auto"></Resume>
                         <Calendar v-if="page.name=='calendar'" class="overflow-auto"></Calendar>
+                        <DataTablesCodePen v-if="page.name=='codepen'" class="overflow-auto"></DataTablesCodePen>
+                        
+                        <div v-if="page.grid == 'banner'" class="banner text-left p-4 rounded-lg">
+                            <div class="flex">
+                                
+                                <div class="mr-2 text-yellow-400">
+                                    <font-awesome-icon icon="fa fa-code" class="icon mt-2" size="2xl" title="GIS" />
+                                </div>                                
+                
+                                <div>
+                                    <div class="font-semibold text-4xl mb-2 text-yellow-400">
+                                        My Story
+                                    </div>
+                                    <div>                                          
+                                        I like making websites and creating innovative solutions.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
 
                     </Card>
                 </div>
@@ -67,7 +88,7 @@
     import PastExperience from './Cards/PastExperience.vue';
     import Resume from './Cards/Resume.vue';
     import Calendar from './Cards/Calendar.vue';
-
+    import DataTablesCodePen from './Cards/DataTablesCodePen.vue';
 
     export default {
         props: {
@@ -85,6 +106,7 @@
             AboutMe,
             Calendar,
             Card,
+            DataTablesCodePen,
             PastExperience,
             PropertyMap,
             Resume
@@ -147,9 +169,16 @@
 
         .grid-card {
             transition: transform ease 84ms;
+            padding: 0;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            background: rgb(255 255 255);
+            background: linear-gradient(140deg, rgb(255 255 255) 0%, rgb(255 255 255) 60%, rgb(237 228 253) 100%);
+        
 
             &.hoverActive {
-                transform: scale(1.025);
+                //transform: scale(1.025);                
             }
         }
 
@@ -167,6 +196,15 @@
                     transform: none;
                 }
             }
+        }        
+
+        &.full {
+            width: 100%;
+        }
+
+        .banner {
+            width: 100%;
+            background: radial-gradient(at center top, #111827c4, #1F2937c4, #374151c4);
         }
 
     }
