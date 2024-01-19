@@ -19,8 +19,8 @@
 
         <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl"        
         ref="fullCalendar"
-        :height="500"
-        :contentHeight="500"
+        :height="'auto'"
+        :contentHeight="'auto'"
         :options="calendarOptions">
         </FullCalendar>
 

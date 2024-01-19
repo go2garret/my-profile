@@ -5,7 +5,7 @@
         style="min-height:100vh">
         </slot>
 
-        <div class="fixed flex justify-center bottom-1 w-full text-center left-0 no-select">           
+        <div class="z-[1] fixed flex justify-center bottom-1 w-full text-center left-0 no-select">
 
             <div class="flex bg-gray-800 text-gray-300 rounded-3xl mb-2 p-3 user-select"
             style="box-shadow: 0 4px 6px -1px #0000001a,0 2px 4px -1px #0000000f,0 10px 15px -3px #0000001a,0 20px 25px -5px #0000001a,0 25px 50px -12px #00000040">

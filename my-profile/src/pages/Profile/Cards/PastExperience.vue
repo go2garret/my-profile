@@ -9,7 +9,7 @@
 
         
         <div class="py-3 m-3 rounded-3xl text-gray-100">
-            <div class="mb-1">Some of my Skills</div>
+            <div class="mb-1">My Skills Include</div>
             <div class="flex flex-wrap items-center justify-center">
                 <div class="skill">
                     <div>Git</div>
