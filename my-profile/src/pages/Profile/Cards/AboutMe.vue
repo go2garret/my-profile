@@ -10,12 +10,12 @@
         </h5>
 
         <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">
-            <div>Full Stack Engineer</div>
+            <div class="mb-1">Full Stack Engineer</div>
             <div>Geospatial Developer</div>
         </div>
 
         
-        <div class="text-sm text-gray-700 mb-3 bg-white px-2 py-4 rounded-lg border">
+        <div class="text-sm text-gray-800 px-2 py-2 mb-3">
             I specialize in Web Development / Relational Databases / Object-Oriented Programming / Geographic Systems
         </div>
 
