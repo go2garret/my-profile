@@ -1,6 +1,8 @@
 <template>
-    <embed class="w-full h-full pb-20" type="application/pdf" 
-    :src="source" id="resume-pdf" />
+    <div class="w-full h-full" >
+        <embed class="w-full h-full" type="application/pdf" 
+        :src="source" id="resume-pdf" />
+    </div>
 </template>
 
 <script>

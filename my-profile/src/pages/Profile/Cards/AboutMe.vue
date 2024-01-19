@@ -15,7 +15,7 @@
         </div>
 
         
-        <div class="text-sm text-gray-700 mb-3 bg-gray-300 p-2 rounded-lg border">
+        <div class="text-sm text-gray-700 mb-3 bg-white px-2 py-4 rounded-lg border">
             I specialize in Web Development / Relational Databases / Object-Oriented Programming / Geographic Systems
         </div>
 

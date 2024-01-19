@@ -1,5 +1,5 @@
 <template>
-    <div class="my-card w-full text-gray-800 bg-gradient-to-r from-gray-100 to-gray-300 rounded-2xl overflow-hidden shadow-lg relative"
+    <div class="my-card w-full text-gray-800 bg-gradient-to-r rounded-2xl overflow-hidden shadow-lg relative card-gradient"
     style="transition: width 84ms ease, height: 84ms ease;"
     @mouseenter="onMouseenter(name)"
     @mouseleave="onMouseleave(name)"
@@ -79,5 +79,10 @@
     height: 400px;
     display: flex;
     flex-direction: column;
+}
+
+.card-gradient {
+    background: rgb(255 255 255);
+    background: linear-gradient(70deg, rgb(255 255 255) 0%, rgb(255 255 255) 60%, rgb(237 228 253) 100%);
 }
 </style>

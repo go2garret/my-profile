@@ -95,12 +95,11 @@ button:focus-visible {
 
 .fc thead th { /* needs to be same precedence */
   border: none;
-  background-color: rgb(75, 73, 167);
-  border-radius: 1rem;
+  background-color: rgb(233 232 255);
 }
 
 .fc thead th a {
-  color: rgb(243, 243, 243);
+  color: #646cff;
 }
 
 .fc .fc-view table {

@@ -47,7 +47,7 @@
                         <AboutMe v-if="page.name=='about-me'"></AboutMe>
                         <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
                         <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
-                        <Resume v-if="page.name=='resume'"></Resume>
+                        <Resume v-if="page.name=='resume'" class="overflow-auto"></Resume>
                         <Calendar v-if="page.name=='calendar'" class="overflow-auto"></Calendar>
 
                     </Card>
