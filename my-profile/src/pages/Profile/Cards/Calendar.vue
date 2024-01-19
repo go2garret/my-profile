@@ -1,7 +1,7 @@
 <template>
-    <div class="p-2 w-full text-gray-800 bg-white h-full flex flex-col">
+    <div class="w-full text-gray-800 bg-white h-full flex flex-col">
 
-        <div class="mb-1 mx-1 ">
+        <div class="mx-1 ">
 
             <div v-if="loading"
             class="text-sm bg-green-300 text-green-800 px-2 rounded-lg inline-block">
@@ -9,15 +9,17 @@
             </div>
 
             <div v-else
-            class="text-lg text-left bg-white  text-gray-700 inline-block px-2 border-b border-gray-400 pb-1 w-full">
+            class="text-left bg-white  text-gray-700 inline-block px-2 text-left w-full">
 
-                <span class="text-gray-500">Showing Airtimes for </span>
-                <b class="">Survivor</b>
+                <div class="text-gray-400 text-sm">Showing Airtimes for </div>
+                <div class="text-2xl text-indigo-700">
+                    Survivor
+                </div>
             </div>
 
         </div>
 
-        <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard m-1 p-3 rounded-2xl"
+        <FullCalendar class="pb-6 flex-grow fc fc-dark fc-direction-ltr fc-media-screen fc-theme-standard px-3"
         ref="fullCalendar"
         :height="'auto'"
         :contentHeight="'auto'"

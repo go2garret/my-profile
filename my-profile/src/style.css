@@ -106,6 +106,16 @@ button:focus-visible {
   border: none;
 }
 
+.fc .fc-view .fc-event {
+  background-color: #344ce5;
+  color: white;
+}
+
+.fc .fc-view .fc-event-time {  
+  font-weight: 400;
+  margin-right: 6px;
+}
+
 .fc .fc-view tbody presentation {
   border: none;
 }
@@ -122,6 +132,30 @@ button:focus-visible {
 .fc .fc-col-header-cell-cushion { /* needs to be same precedence */
   padding-top: 5px; /* an override! */
   padding-bottom: 5px; /* an override! */
+}
+
+.fc .fc-header-toolbar .fc-button {  
+  background-color: unset;
+  color: #7064ff;
+  border: none;
+}
+
+.fc .fc-header-toolbar .fc-button:hover, 
+.fc .fc-header-toolbar .fc-button:active, 
+.fc .fc-header-toolbar .fc-button:focus  {
+  background-color: #eae7ff;
+  color: #7064ff;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0.5em;
+}
+
+.fc .fc-header-toolbar .fc-toolbar-title {
+  color: #a88dd4;
+  font-size: 1.5rem;
 }
 
 /* End FullCalendar */

@@ -63,8 +63,24 @@
                                     <div class="font-semibold text-4xl mb-2 text-yellow-400">
                                         My Story
                                     </div>
-                                    <div>                                          
-                                        I like making websites and creating innovative solutions.
+                                    <div>     
+                                        <div class="mb-2">
+                                            I'm really passionate about producing a seamless, fast user experience. I have been coding for over 10 years. I love to travel and see new places.
+                                        </div>
+
+                                        <div class="flex text-xs text-yellow-400 font-bold mb-2">
+                                            <div class="mr-2">+ SQL</div>
+                                            <div class="mr-2">+ Data Modeling</div>
+                                            <div class="mr-2">+ JSON</div>
+                                            <div class="mr-2">+ Fulltext</div>
+                                            <div class="mr-2">+ Triggers</div>
+                                            <div class="mr-2">+ Views</div>
+                                        </div>
+                                        <div class="flex text-xs text-yellow-400 font-bold">
+                                            <div class="mr-2">+ Visual Studio and Code</div>
+                                            <div class="mr-2">+ Object Oriented Programming</div>
+                                            <div class="mr-2">+ APIs</div>
+                                        </div>
                                     </div>
                                 </div>
 
