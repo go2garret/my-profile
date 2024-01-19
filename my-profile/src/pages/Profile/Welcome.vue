@@ -48,7 +48,7 @@
                         <PastExperience v-if="page.name=='past-experience'" class="overflow-auto"></PastExperience>
                         <PropertyMap v-if="page.name=='property-map'"></PropertyMap>
                         <Resume v-if="page.name=='resume'"></Resume>
-                        <Calendar v-if="page.name=='calendar'"></Calendar>
+                        <Calendar v-if="page.name=='calendar'" class="overflow-auto"></Calendar>
 
                     </Card>
                 </div>
