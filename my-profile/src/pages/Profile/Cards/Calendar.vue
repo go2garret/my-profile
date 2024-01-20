@@ -89,8 +89,6 @@ export default {
         },
 
         parseEvent(row) {
-            console.log(row);
-
             // Calculate show end time
             let endtime = new Date(row.airdate + 'T' + row.airtime);
             endtime.setMinutes(endtime.getMinutes() + row.runtime);
