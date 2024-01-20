@@ -1,5 +1,6 @@
 <template>
     <div class="w-full"
+    id="profile-page"
     style="background:url(https://images.unsplash.com/photo-1509088960169-ecb53eda6ed8?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size:cover; height:100vh; overflow: auto">
         <div class="profile-header sticky flex items-center justify-between px-4"
         style="top:0;left:0">
