@@ -13,11 +13,12 @@
 
                     <Card
                     v-on:setActive="setActive"
+                    :id="page.name"
                     :title="page.title"
                     :subtitle="page.subtitle"
                     :name="page.name"
                     :icon="page.icon"
-                    :active="active"
+                    :active="active && active != 'welcome' ? true : false"
                     :class="page.grid == 'banner' ? 'na' : 'grid-card text-gray-800 bg-gradient-to-r rounded-2xl overflow-hidden shadow-lg relative card-gradient'">
 
                         <template v-slot:top-right 
@@ -68,7 +69,7 @@
                                             I'm really passionate about producing a seamless, fast user experience. I have been coding for over 10 years. I love to travel and see new places.
                                         </div>
 
-                                        <div class="flex text-xs text-yellow-400 font-bold mb-2">
+                                        <div class="flex text-sm text-yellow-400 font-bold mb-2">
                                             <div class="mr-2">+ SQL</div>
                                             <div class="mr-2">+ Data Modeling</div>
                                             <div class="mr-2">+ JSON</div>
@@ -76,7 +77,7 @@
                                             <div class="mr-2">+ Triggers</div>
                                             <div class="mr-2">+ Views</div>
                                         </div>
-                                        <div class="flex text-xs text-yellow-400 font-bold">
+                                        <div class="flex text-sm text-yellow-400 font-bold">
                                             <div class="mr-2">+ Visual Studio and Code</div>
                                             <div class="mr-2">+ Object Oriented Programming</div>
                                             <div class="mr-2">+ APIs</div>
@@ -118,6 +119,9 @@
             }
         },
 
+        data() {
+        },
+
         components: {
             AboutMe,
             Calendar,
@@ -129,7 +133,8 @@
         },
 
         methods: {
-            setActive(item) {
+            setActive(item) {             
+                // Emit active item
                 if (this.active == item) {
                     this.$emit('setActive', 'welcome');
                     return;
@@ -138,7 +143,7 @@
             },
             isActive(name) {
                 return this.active && this.active == name || (this.active && ['welcome'].includes(this.active)) || !this.active;
-            }
+            },
         },
 
         computed: {
