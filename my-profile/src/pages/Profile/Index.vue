@@ -1,7 +1,6 @@
 <template>
-    <div class="w-full"
-    id="profile-page"
-    style="background:url(https://images.unsplash.com/photo-1509088960169-ecb53eda6ed8?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); background-size:cover; height:100vh; overflow: auto">
+    <div class="w-full profile-page"
+    id="profile-page">
         <div class="profile-header sticky flex items-center justify-between px-4"
         style="top:0;left:0">
 
@@ -42,7 +41,8 @@
 
             <div>
 
-                <Welcome :pages="pages" :active="active"
+                <Welcome :pages="pages" 
+                :active="active"
                 v-on:setActive="setActive">
                 </Welcome>
 
@@ -78,7 +78,15 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .profile-page {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.5)
+          ),url(https://images.unsplash.com/photo-1509088960169-ecb53eda6ed8?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); 
+        background-size:cover; 
+        height:100vh; 
+        overflow: auto;
+    }
     .profile-header {
         background: rgba(8, 38, 83, 0.7);
         height: 38px;

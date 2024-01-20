@@ -66,21 +66,22 @@
                                     </div>
                                     <div>     
                                         <div class="mb-2">
-                                            I'm really passionate about producing a seamless, fast user experience. I have been coding for over 10 years. I love to travel and see new places.
+                                            I'm really passionate about producing web designs with a fast, seamless user experience. I have been coding for over 10 years. I love to travel and see new places.
                                         </div>
 
-                                        <div class="flex text-sm text-yellow-400 font-bold mb-2">
-                                            <div class="mr-2">+ SQL</div>
-                                            <div class="mr-2">+ Data Modeling</div>
-                                            <div class="mr-2">+ JSON</div>
-                                            <div class="mr-2">+ Fulltext</div>
-                                            <div class="mr-2">+ Triggers</div>
-                                            <div class="mr-2">+ Views</div>
+                                        <div class="text-sm text-green-400 font-bold mb-2">
+                                            <span class="mr-2">+ SQL</span>
+                                            <span class="mr-2">+ Data Modeling</span>
+                                            <span class="mr-2">+ JSON</span>
+                                            <span class="mr-2">+ Fulltext</span>
+                                            <span class="mr-2">+ Triggers</span>
+                                            <span class="mr-2">+ Views</span>
                                         </div>
-                                        <div class="flex text-sm text-yellow-400 font-bold">
-                                            <div class="mr-2">+ Visual Studio and Code</div>
-                                            <div class="mr-2">+ Object Oriented Programming</div>
-                                            <div class="mr-2">+ APIs</div>
+                                        <div class="text-sm text-teal-400 font-bold mb-2">
+                                            <span class="mr-2">+ Visual Studio and Code</span>
+                                            <span class="mr-2">+ Object Oriented Programming</span>
+                                            <span class="mr-2">+ APIs</span>
+                                            <span class="mr-2">+ Vue.js</span>
                                         </div>
                                     </div>
                                 </div>
@@ -115,11 +116,8 @@
             },
 
             active: {
-                type: Boolean
+                type: String
             }
-        },
-
-        data() {
         },
 
         components: {
@@ -196,7 +194,7 @@
             flex-direction: column;
             background: rgb(255 255 255);
             background: linear-gradient(140deg, rgb(255 255 255) 0%, rgb(255 255 255) 60%, rgb(237 228 253) 100%);
-        
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow), var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow), var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
             &.hoverActive {
                 //transform: scale(1.025);                

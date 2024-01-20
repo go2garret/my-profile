@@ -10,8 +10,9 @@
         </h5>
 
         <div class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+            <div class="mb-1">Web Developer</div>
             <div class="mb-1">Full Stack Engineer</div>
-            <div>Geospatial Developer</div>
+            <div>GIS Analyst</div>
         </div>
 
         
