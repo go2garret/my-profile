@@ -4,7 +4,13 @@
 	v-on:setActive="setActive">
 		<Profile :active="active" :pages="pages"
 		v-on:setActive="setActive">
-		</Profile>   
+		</Profile>
+
+		<div class="bg-white block" style="min-height:100px">
+
+			stuff
+
+		</div>
 	</Layout>
 </template>
 
@@ -16,7 +22,8 @@ import Profile from './pages/Profile/Index.vue';
 export default {
 	data() {
 		return {
-			active: null,			
+			active: null,	
+			scrollY: null,		
 			pages: {
 				0: {
 					title: 'Welcome',
@@ -78,6 +85,26 @@ export default {
 
 	methods: {
 		setActive(page) {
+			const pageElement = document.getElementById('profile-page');
+
+			// On nagivate to home, scroll to last scroll
+			if (page == 'welcome' || !page || page == '/') {
+				if (this.scrollY) {
+					this.active = page;
+					this.$nextTick(() => {
+						pageElement.scrollTo({
+							top: this.scrollY
+						});						
+					});
+					return;
+				}
+				
+			} else {
+				// Save current scroll before opening page
+				const currentScroll = pageElement.scrollTop;
+				this.scrollY = currentScroll;
+			}			
+
 			this.active = page;
 		}
 	},
